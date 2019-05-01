@@ -2,7 +2,7 @@
 
 ## O que é o Jogo da Memória?
 Esse é um jogo criado em HTML, CSS e Javascript para testar a memória do usuário
-![snippet](img/snippet.png)
+![snippet](jogo-da-memoria.png)
 
 ## Instruções
 * Clique em uma carta
@@ -14,3 +14,6 @@ O jogo foi criado manipulando o deck de cartas, criando funções que revelam as
 
 # Como ganhar?
 Caso o jogador acerte todos os pares, o jogo termina e é aberto o modal de resultados com a nota, tempo e número de jogadas, e o jogador tem a opção de jogar novamente, reiniciando o tabuleiro, desvirando e embaralhando todas as cartas, assim como reiniciando todos os valores de tempo, jogada e nota.
+
+# Jogue Agora!
+[Clique aqui e jogue agora.](https://codepen.io/brunodups/pen/jRjYQO)
