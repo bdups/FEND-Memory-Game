@@ -36,7 +36,6 @@ let tempo = document.querySelector('.tempo');
 const modal = document.querySelector('.modal-bg');
 let tempoFinal = document.querySelector('.tempo-final');
 let estrelas = document.querySelectorAll('.fa-star');
-let estrelasFinal = document.querySelector('.stars').innerHTML;
 const resetar = document.querySelector('.restart');
 const jogarNovo = document.querySelector('.repetir');
 
@@ -118,6 +117,7 @@ function MatchouNao() {
         cartasViradas[1].classList.toggle('match');
         cartasViradas[0].classList.toggle('match');
         cartasViradas = [];
+        pares++;
     } else {
         /*
         * Se não for match precisamos esvaziar nosso array,
@@ -195,6 +195,7 @@ function gameOver() {
     let totalJogadas = document.querySelector('.jogadas-final');
     totalJogadas.innerHTML = jogadas;
 
+    let estrelasFinal = document.querySelector('.stars').innerHTML;
     let notaFinal = document.querySelector('.estrelas-final');
     notaFinal.innerHTML = estrelasFinal;
 }
@@ -253,9 +254,7 @@ function resetarCartas() {
  */
 function resetarEstrelas() {
     for (i = 0; i < 3; i++) {
-        if (i > 1) {
-            estrelas[i].style.display = 'block';
-        }
+        estrelas[i].style.display = 'block';
     }
 }
 
@@ -304,7 +303,6 @@ tabuleiro.addEventListener('click', event => {
             MatchouNao(carta);
             incJogada();
             placar();
-            pares++;
             if (pares === 8) {
                 gameOver();
             }
